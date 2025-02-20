@@ -1,10 +1,16 @@
-import 'package:bookspire/core/utils/colors.dart';
+
+import 'package:bookspire/core/routing/routes.dart';
+import 'package:bookspire/core/utils/constants.dart';
 import 'package:bookspire/core/utils/strings.dart';
+import 'package:bookspire/features/home/presentation/views/home_view.dart';
 import 'package:bookspire/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
+import 'package:get/get.dart';
+import 'package:get/get_common/get_reset.dart';
+import 'package:get/get_core/get_core.dart';
+
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -20,16 +26,31 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     super.initState();
+    initSlidingAnimated();
+
+    navigateToHome();
+  }
+
+  void navigateToHome() {
+    
+    Future.delayed(const Duration(seconds: 2), () {
+        Get.to(()=>
+          HomeView(),transition: Transition.fadeIn, duration:  transationduration) 
+      ;    
+    });
+  }
+
+  void initSlidingAnimated() {
     _animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 3));
+        AnimationController(vsync: this, duration: const Duration(seconds: 2));
     _slidingAnimation =
         Tween<Offset>(begin: const Offset(0, 2), end: const Offset(0, 0))
             .animate(CurvedAnimation(
                 parent: _animationController,
                 curve: Curves.fastEaseInToSlowEaseOut));
     _animationController.forward();
-
   }
+
   @override
   void dispose() {
     _animationController.dispose();
