@@ -12,7 +12,7 @@ class BookSpire extends StatelessWidget {
       designSize: const Size(375, 812),
       child: MaterialApp(
         theme:ThemeData().copyWith(
-          scaffoldBackgroundColor: whiteColor,
+          scaffoldBackgroundColor: ColorsManager.whiteColor,
         ),
        home:SplashView(),
       ),

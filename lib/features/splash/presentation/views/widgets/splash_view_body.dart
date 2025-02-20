@@ -1,4 +1,5 @@
 
+import 'package:bookspire/core/utils/colors.dart';
 import 'package:bookspire/core/utils/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,20 +25,23 @@ class SplashViewBody extends StatelessWidget {
       ),
       child: Center(
         child: Column(
+         
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SvgPicture.asset(
-             StringManager().bookLogo,
+             StringManager.bookLogo,
               width: 200.w,
               height: 200.h,
             ),
              SizedBox(height: 20.h),
             Text(
-              StringManager().appName,
+              StringManager.appName,
               style: TextStyle(
-                
-                fontSize: 30.sp,
+                fontFamily:StringManager.fontFamilyJua,
+                fontSize: 36.sp,
                 fontWeight: FontWeight.bold,
+                color : ColorsManager.darkBlueTextColor
               ),)
              
 

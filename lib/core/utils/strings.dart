@@ -1,5 +1,9 @@
 
 class StringManager {
-  String appName='Book Spire';
-String bookLogo='assets/images/logo.svg';
+static const String appName='Book Spire';
+  static const String fontFamilyJua='Jua';
+  static const String fontFamilyRoboto='Roboto';
+
+  static const String bookLogo='assets/images/logo.svg';
+
 }
