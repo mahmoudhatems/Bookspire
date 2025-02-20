@@ -4,6 +4,7 @@ import 'package:bookspire/core/utils/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
@@ -27,7 +28,7 @@ class SplashViewBody extends StatelessWidget {
         child: Column(
          
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SvgPicture.asset(
              StringManager.bookLogo,
@@ -36,6 +37,7 @@ class SplashViewBody extends StatelessWidget {
             ),
              SizedBox(height: 20.h),
             Text(
+              textAlign: TextAlign.center,
               StringManager.appName,
               style: TextStyle(
                 fontFamily:StringManager.fontFamilyJua,
