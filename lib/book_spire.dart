@@ -1,15 +1,21 @@
-
+import 'package:bookspire/core/utils/colors.dart';
 import 'package:bookspire/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 class BookSpire extends StatelessWidget {
   const BookSpire({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-     home:SplashView(),
+    return  ScreenUtilInit(
+      splitScreenMode: false,
+      designSize: const Size(375, 812),
+      child: MaterialApp(
+        theme:ThemeData().copyWith(
+          scaffoldBackgroundColor: whiteColor,
+        ),
+       home:SplashView(),
+      ),
     );
   }
 }
