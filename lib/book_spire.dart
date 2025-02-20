@@ -11,6 +11,7 @@ class BookSpire extends StatelessWidget {
       splitScreenMode: false,
       designSize: const Size(375, 812),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme:ThemeData.light().copyWith(
           scaffoldBackgroundColor: ColorsManager.whiteColor,
         ),
