@@ -1,5 +1,4 @@
 
-import 'package:bookspire/core/routing/routes.dart';
 import 'package:bookspire/core/utils/constants.dart';
 import 'package:bookspire/core/utils/strings.dart';
 import 'package:bookspire/features/home/presentation/views/home_view.dart';
@@ -8,10 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_common/get_reset.dart';
-import 'package:get/get_core/get_core.dart';
-
-
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
 
@@ -35,7 +30,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     
     Future.delayed(const Duration(seconds: 2), () {
         Get.to(()=>
-          HomeView(),transition: Transition.fadeIn, duration:  transationduration) 
+          const HomeView(),transition: Transition.fadeIn, duration:  transationduration) 
       ;    
     });
   }
