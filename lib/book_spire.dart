@@ -16,7 +16,7 @@ class BookSpire extends StatelessWidget {
         theme:ThemeData.light().copyWith(
           scaffoldBackgroundColor: ColorsManager.backGroundMoreLight,
         ),
-       home:const SplashView(),
+       home: const SplashView(),
       ),
     );
   }

@@ -110,6 +110,6 @@ class HomeView extends StatelessWidget {
             ],
           ),
         ),
-        body: HomeBody());
+        body: const HomeBody());
   }
 }
