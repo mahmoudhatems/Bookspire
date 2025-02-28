@@ -1,6 +1,7 @@
 import 'package:bookspire/features/home/presentation/widgets/custom_featured_list_viewItem.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_utils/get_utils.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
   const FeaturedBooksListView({super.key});
@@ -10,6 +11,7 @@ class FeaturedBooksListView extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.32,
       child: ListView.builder(
+        itemExtent: context.width * 0.5,
           scrollDirection: Axis.horizontal,
           itemBuilder: (constext, index) {
             return Padding(
