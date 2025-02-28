@@ -1,4 +1,5 @@
 import 'package:bookspire/core/utils/styles.dart';
+import 'package:bookspire/features/home/presentation/widgets/best_seller_list_view_item.dart';
 import 'package:bookspire/features/home/presentation/widgets/custom_featured_list_viewItem.dart';
 import 'package:bookspire/features/home/presentation/widgets/featured_books_list_view.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +18,13 @@ class HomeBody extends StatelessWidget {
         Padding(
           padding:  EdgeInsets.symmetric(horizontal: 12.w),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("Best Seller", style: Styles.titleMedium),
+              SizedBox(height: 20.h),
+          
+              BestSellerListViewItem(),
+
             ],
           ),
         ),
