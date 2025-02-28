@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// BestSellerListViewItem is a widget that displays the best seller book list item.
-/// It contains the book cover image and the book title.
+/// have a book cover, title, author, and price.
 /// It is used in the HomeBody widget.
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -44,21 +44,20 @@ class BestSellerListViewItem extends StatelessWidget {
               SizedBox(height: 5.h),
               Text(
                 "Alex Michaelides",
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 14.sp,
-                  fontFamily: StringManager.fontFamilyRoboto,
-                ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: Styles.styleNormalText14GrayRoboto,
               ),
               SizedBox(height: 5.h),
-              Text(
-                "4.5",
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 14.sp,
-                  fontFamily: StringManager.fontFamilyRoboto,
-                ),
-              ),
+              Row(
+                children: [
+                  Text(
+                    "12.99 \$",
+                    style: Styles.styleBoldText20GrayRoboto,
+                    maxLines: 1,
+                  )
+                ],
+              )
             ],
           ),
         ],

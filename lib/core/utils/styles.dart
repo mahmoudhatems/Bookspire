@@ -27,10 +27,21 @@ abstract class Styles {
       fontSize: 28.sp,
       fontWeight: FontWeight.w700,
       color: ColorsManager.darkBlueTextColor);
-      static final styleSemiBoldText20darkBlueJua =  TextStyle(
-                    fontSize: 20.sp,
-                    fontWeight: FontWeight.w600,
-                    color:  ColorsManager.darkBlueTextColor,
-                    fontFamily: StringManager.fontFamilyJua,
-                  );
+  static final styleSemiBoldText20darkBlueJua = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+    color: ColorsManager.darkBlueTextColor,
+    fontFamily: StringManager.fontFamilyJua,
+  );
+  static final styleNormalText14GrayRoboto = TextStyle(
+    color: ColorsManager.textIconColorGray,
+    fontSize: 14.sp,
+    fontFamily: StringManager.fontFamilyRoboto,
+  );
+  static final styleBoldText20GrayRoboto = TextStyle(
+    color: ColorsManager.textIconColorGray,
+    fontSize: 20.sp,
+    fontFamily: StringManager.fontFamilyRoboto,
+    fontWeight: FontWeight.bold,
+  );
 }

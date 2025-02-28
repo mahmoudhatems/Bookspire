@@ -9,4 +9,5 @@ class ColorsManager {
   static const Color gold = Color(0xFFFBDA72);
   static const Color textIconColor = Color(0xFF242A30);
   static const Color backGroundMoreLight = Color(0xFFFFFBF7);
+  static const Color textIconColorGray = Color(0xFF4D506C);
 }
