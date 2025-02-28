@@ -2,7 +2,9 @@ import 'package:bookspire/features/home/presentation/widgets/custom_featured_lis
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_utils/get_utils.dart';
-
+/// FeaturedBooksListView is a widget that displays the featured book list.
+/// It contains the CustomFeaturedListViewItem.
+/// It is used in the HomeBody widget.
 class FeaturedBooksListView extends StatelessWidget {
   const FeaturedBooksListView({super.key});
 

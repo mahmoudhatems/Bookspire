@@ -1,13 +1,14 @@
 
 import 'package:bookspire/core/utils/colors.dart';
 import 'package:bookspire/core/utils/strings.dart';
+import 'package:bookspire/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:insta_image_viewer/insta_image_viewer.dart';
-
+/// SearchField is a widget that displays the search field and the user profile image.
+/// It is used in the HomeScreen widget.
 class SearchField extends StatelessWidget {
   const SearchField({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -34,10 +35,7 @@ class SearchField extends StatelessWidget {
                 child: Text(
                   overflow:  TextOverflow.ellipsis,
                   'Search a book or author...',
-                  style: TextStyle(
-                    color:ColorsManager.textIconColor,
-                    fontSize: 14.sp,
-                  ),
+                  style: Styles.styleText14BlackColorRoboto
                 ),
               ),
             ],

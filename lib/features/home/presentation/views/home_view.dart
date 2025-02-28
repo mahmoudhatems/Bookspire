@@ -1,11 +1,13 @@
 import 'package:bookspire/core/utils/colors.dart';
 import 'package:bookspire/core/utils/strings.dart';
+import 'package:bookspire/core/utils/styles.dart';
 import 'package:bookspire/features/home/presentation/widgets/home_body.dart';
 import 'package:bookspire/features/home/presentation/widgets/search_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
+/// HomeView is the main screen of the app.
+/// It contains the app bar, drawer, and the body of the screen.
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
@@ -50,11 +52,7 @@ class HomeView extends StatelessWidget {
                     Text(
                       textAlign: TextAlign.center,
                       StringManager.appName,
-                      style: TextStyle(
-                          fontFamily: StringManager.fontFamilyJua,
-                          fontSize: 30.sp,
-                          fontWeight: FontWeight.bold,
-                          color: ColorsManager.darkBlueTextColor),
+                      style: Styles.styleBoldText28darkBlueJua
                     ),
                   ],
                 ),
