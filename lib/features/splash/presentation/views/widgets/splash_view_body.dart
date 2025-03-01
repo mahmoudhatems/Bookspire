@@ -1,4 +1,3 @@
-
 import 'package:bookspire/core/utils/constants.dart';
 import 'package:bookspire/core/utils/strings.dart';
 import 'package:bookspire/features/home/presentation/views/home_view.dart';
@@ -7,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
 
@@ -20,6 +20,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   late Animation<Offset> _slidingAnimation;
   @override
   void initState() {
+    
     super.initState();
     initSlidingAnimated();
 
@@ -27,11 +28,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToHome() {
-    
     Future.delayed(const Duration(seconds: 2), () {
-        Get.to(()=>
-          const HomeView(),transition: Transition.fadeIn, duration:  transationduration) 
-      ;    
+      Get.offAll(() => const HomeView(),
+          transition: Transition.fadeIn, duration: transationduration);
     });
   }
 

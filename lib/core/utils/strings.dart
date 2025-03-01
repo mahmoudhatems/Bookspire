@@ -6,5 +6,7 @@ static const String appName='Book Spire';
   static const String fontFamilyRoboto='Roboto';
 
   static const String bookLogo='assets/images/logo.svg';
+  static const String userImage='assets/images/user.jpg';
+  static const String testBookCover='assets/images/book_cover.png';
 
 }
