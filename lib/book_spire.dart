@@ -10,6 +10,7 @@ class BookSpire extends StatelessWidget {
   Widget build(BuildContext context) {
     return  ScreenUtilInit(
       splitScreenMode: false,
+      
       designSize: const Size(375, 812),
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,

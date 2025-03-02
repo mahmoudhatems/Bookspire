@@ -1,6 +1,5 @@
 import 'package:bookspire/core/utils/styles.dart';
 import 'package:bookspire/features/home/presentation/widgets/best_seller_list_view.dart';
-import 'package:bookspire/features/home/presentation/widgets/best_seller_list_view_item.dart';
 import 'package:bookspire/features/home/presentation/widgets/featured_books_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

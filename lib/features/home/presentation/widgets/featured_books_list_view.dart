@@ -1,4 +1,4 @@
-import 'package:bookspire/features/home/presentation/widgets/custom_featured_list_viewItem.dart';
+import 'package:bookspire/features/home/presentation/widgets/custom_featured_list_viewitem.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_utils/get_utils.dart';
