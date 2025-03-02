@@ -2,7 +2,7 @@ import 'package:bookspire/core/utils/colors.dart';
 import 'package:bookspire/core/utils/strings.dart';
 import 'package:bookspire/core/utils/styles.dart';
 import 'package:bookspire/features/home/presentation/widgets/home_body.dart';
-import 'package:bookspire/features/home/presentation/widgets/search_widget.dart';
+import 'package:bookspire/features/search/presentation/widgets/search_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';

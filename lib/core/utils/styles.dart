@@ -44,4 +44,11 @@ abstract class Styles {
     fontFamily: StringManager.fontFamilyRoboto,
     fontWeight: FontWeight.bold,
   );
+
+  static final stylesemiBoldText18ButomRoboto = TextStyle(
+    color: ColorsManager.darkBlueTextColor,
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w600,
+    fontFamily: StringManager.fontFamilyRoboto,
+  );
 }
