@@ -1,7 +1,5 @@
 import 'package:bookspire/core/routing/routes.dart';
-import 'package:bookspire/core/utils/constants.dart';
 import 'package:bookspire/core/utils/strings.dart';
-import 'package:bookspire/features/home/presentation/views/home_view.dart';
 import 'package:bookspire/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,6 +30,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
         const Duration(
           seconds: 2,
         ), () {
+      // ignore: use_build_context_synchronously
       GoRouter.of(context).pushReplacement(Routes.home);
     });
   }

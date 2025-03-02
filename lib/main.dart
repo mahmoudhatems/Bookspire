@@ -5,5 +5,4 @@ import 'package:flutter/rendering.dart';
 void main() {
   debugRepaintRainbowEnabled = false ;
   runApp(const BookSpire());
-
 }
