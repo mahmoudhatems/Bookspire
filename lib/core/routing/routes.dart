@@ -7,4 +7,6 @@ class Routes {
   static const String settings = '/settings';
   static const String about = '/about';
   static const String notFound = '/not-found';
+  static const String bookDetails = '/book-details';
 }
+
