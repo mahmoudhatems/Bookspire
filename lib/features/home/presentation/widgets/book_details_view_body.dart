@@ -2,7 +2,9 @@ import 'package:bookspire/core/utils/colors.dart';
 import 'package:bookspire/core/utils/styles.dart';
 import 'package:bookspire/core/widgets/custom_buttom.dart';
 import 'package:bookspire/features/home/presentation/widgets/book_rating.dart';
+import 'package:bookspire/features/home/presentation/widgets/books_actions.dart';
 import 'package:bookspire/features/home/presentation/widgets/custom_featured_list_viewitem.dart';
+import 'package:bookspire/features/home/presentation/widgets/similar_books_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -12,8 +14,12 @@ class BookDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-
-    return Scaffold(
+    return
+     CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         actions: [
@@ -91,40 +97,34 @@ class BookDetailsViewBody extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20.h),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.w),
-            child: Row(
-              children: [
-                Expanded(
-                    child: CustomButtom(
-                  text: "19.99 \$",
-                  onPressed: () {},
-                  backgroundColor: ColorsManager.whiteColor,
-                  textStyle: Styles.stylesemiBoldText18ButomRoboto,
-                  borderColor: ColorsManager.yellow,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(10.r),
-                    bottomLeft: Radius.circular(10.r),
+          const BooksActions(),
+          Expanded(child: SizedBox(height: 20.h)),
+          // suggested books
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                child: Text(
+                  "You Can Also Like",
+                  style: Styles.styleText14BlackColorRoboto.copyWith(
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w500,
                   ),
-                )),
-                Expanded(
-                    child: CustomButtom(
-                  text: " Free Preview",
-                  onPressed: () {},
-                  backgroundColor: ColorsManager.yellow,
-                  textStyle: Styles.stylesemiBoldText18ButomRoboto.copyWith(
-                    color: ColorsManager.backGroundMoreLight,
-                  ),
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(10.r),
-                    bottomRight: Radius.circular(10.r),
-                  ),
-                )),
-              ],
-            ),
+                ),
+              ),
+            ],
           ),
+          SizedBox(height: 10.h),
+          // suggested books list
+       const   SimilarBooksListView(),
+        SizedBox(height: 40.h),
         ],
       ),
-    );
+    ),
+        )
+      ],
+     );
+    
   }
 }

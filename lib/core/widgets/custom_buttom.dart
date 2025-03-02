@@ -1,4 +1,5 @@
 
+import 'package:bookspire/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,6 +24,9 @@ class CustomButtom extends StatelessWidget {
       height: 50.h,
       child: TextButton(
         style: TextButton.styleFrom(
+
+          overlayColor: ColorsManager.purple.withOpacity(0.1),
+           splashFactory: InkRipple.splashFactory,
           backgroundColor: backgroundColor, //ColorsManager.gold,
           shape: RoundedRectangleBorder(
             borderRadius: borderRadius,
