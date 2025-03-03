@@ -2,10 +2,8 @@ import 'package:bookspire/core/utils/colors.dart';
 import 'package:bookspire/core/utils/styles.dart';
 import 'package:bookspire/core/widgets/back_leading_appbar.dart';
 import 'package:bookspire/features/home/presentation/widgets/book_list_view_item.dart';
-import 'package:bookspire/features/search/presentation/widgets/search_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
