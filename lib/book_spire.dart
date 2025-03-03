@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class BookSpire extends StatelessWidget {
   const BookSpire({super.key});
 
-  @override
+  @override  
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       splitScreenMode: false,

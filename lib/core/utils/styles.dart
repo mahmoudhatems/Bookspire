@@ -51,4 +51,10 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     fontFamily: StringManager.fontFamilyRoboto,
   );
+  static final styleBoldText20ButomRoboto = TextStyle(
+    color: ColorsManager.darkBlueTextColor,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: StringManager.fontFamilyRoboto,
+  );
 }

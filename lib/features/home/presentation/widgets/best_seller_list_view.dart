@@ -1,4 +1,4 @@
-import 'package:bookspire/features/home/presentation/widgets/best_seller_list_view_item.dart';
+import 'package:bookspire/features/home/presentation/widgets/book_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,7 +14,7 @@ class BestSellerListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.symmetric(vertical: 10.h),
-            child: const BestSellerListViewItem(),
+            child: const BookListViewItem(),
           );
         });
   }

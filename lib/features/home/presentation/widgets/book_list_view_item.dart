@@ -9,8 +9,8 @@ import 'package:go_router/go_router.dart';
 /// BestSellerListViewItem is a widget that displays the best seller book list item.
 /// have a book cover, title, author, and price.
 /// It is used in the HomeBody widget.
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class BookListViewItem extends StatelessWidget {
+  const BookListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
