@@ -1,14 +1,12 @@
 import 'package:bookspire/core/utils/colors.dart';
 import 'package:bookspire/core/utils/styles.dart';
-import 'package:bookspire/core/widgets/custom_buttom.dart';
+import 'package:bookspire/core/widgets/back_leading_appbar.dart';
 import 'package:bookspire/features/home/presentation/widgets/book_details_section.dart';
 import 'package:bookspire/features/home/presentation/widgets/book_rating.dart';
 import 'package:bookspire/features/home/presentation/widgets/books_actions.dart';
-import 'package:bookspire/features/home/presentation/widgets/custom_featured_list_viewitem.dart';
 import 'package:bookspire/features/home/presentation/widgets/similar_books_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -33,16 +31,7 @@ class BookDetailsViewBody extends StatelessWidget {
                   },
                 ),
               ],
-              leading: IconButton(
-                icon: Icon(
-                  Icons.arrow_back_ios_new_outlined,
-                  size: 26.sp,
-                  color: ColorsManager.textIconColor,
-                ),
-                onPressed: () {
-                  GoRouter.of(context).pop();
-                },
-              ),
+              leading: const BackLeadingAppbar(),
             ),
             body: Column(
               children: [

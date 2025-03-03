@@ -44,9 +44,10 @@ class _SearchFieldState extends State<SearchField> {
             decoration: InputDecoration(
               prefixIcon:
                   const Icon(Icons.search, color: ColorsManager.textIconColor),
-              hintText: 'Search a book or author...',
+              hintText: 'Search a book or author..',
               hintStyle: Styles.styleText14BlackColorRoboto,
               border: InputBorder.none,
+              hintMaxLines: 1,
               contentPadding: EdgeInsets.symmetric(vertical: 12.h),
             ),
             style: Styles.styleText14BlackColorRoboto,
