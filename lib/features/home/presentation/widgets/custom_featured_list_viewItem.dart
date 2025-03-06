@@ -1,4 +1,5 @@
-import 'package:bookspire/core/utils/strings.dart';
+import 'package:bookspire/core/widgets/custom_loading_indecator_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,16 +13,14 @@ class CustomBookImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.32,
-      child: AspectRatio(
-        aspectRatio: 2.9 / 4,
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.grey[200],
-            borderRadius: BorderRadius.circular(16.r),
-            image:  DecorationImage(
-              image: NetworkImage(bookCoverImageURL),
-              fit: BoxFit.fill,
-            ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16.r),
+        child: AspectRatio(
+          aspectRatio: 2.9 / 4,
+          child: CachedNetworkImage(
+            imageUrl: bookCoverImageURL,
+            fit: BoxFit.cover,
+            errorWidget: (context, url, error) => const Icon(Icons.error),
           ),
         ),
       ),
