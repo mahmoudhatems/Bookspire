@@ -7,7 +7,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 /// BookRating is a widget that displays the rating of the book.
 /// It is used in the BestSellerListViewItem widget.
 class BookRating extends StatelessWidget {
-  const BookRating({super.key});
+  const BookRating({super.key, required this.rating, required this.ratingCount});
+  final num rating;
+  final int ratingCount;
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +21,12 @@ class BookRating extends StatelessWidget {
           size: 18.sp,
         ),
         SizedBox(width: 8.w),
-        Text("4.5",
+        Text(rating.toString(),
             style: Styles.styleNormalText14GrayRoboto
                 .copyWith(fontSize: 18.sp, fontWeight: FontWeight.w600)),
         SizedBox(width: 5.w),
         Text(
-          "(72)",
+          "($ratingCount)",
           style: Styles.styleNormalText14GrayRoboto,
         ),
       ],

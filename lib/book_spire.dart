@@ -21,7 +21,8 @@ class BookSpire extends StatelessWidget {
                   ..fetchFeaturedBooks()),
         BlocProvider(
             create: (context) =>
-                NewsetBooksCubit(getIt.get<HomeRepoImplementation>()))
+                NewsetBooksCubit(getIt.get<HomeRepoImplementation>())
+                  ..fetchNewsetBooks())
       ],
       child: ScreenUtilInit(
         splitScreenMode: false,
