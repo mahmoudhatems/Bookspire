@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomErrorWidget extends StatelessWidget {
   const CustomErrorWidget({super.key, required this.errorMessage});
- final String errorMessage;
+  final String errorMessage;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -15,14 +15,18 @@ class CustomErrorWidget extends StatelessWidget {
             color: Colors.red,
           ),
           const SizedBox(height: 10),
-           Text(
-            errorMessage,
-            style: const TextStyle(
-              fontSize: 20,
-              color: Colors.red,
+          Center(
+            child: Text(
+              textAlign: TextAlign.center,
+              errorMessage,
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.red,
+              ),
             ),
           ),
         ],
       ),
     );
-}}
+  }
+}
