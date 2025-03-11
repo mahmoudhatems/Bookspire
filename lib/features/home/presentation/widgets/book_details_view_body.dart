@@ -57,7 +57,9 @@ class BookDetailsViewBody extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20.h),
-                const BooksActions(),
+                 BooksActions(
+                  bookModel: bookModel,
+                ),
                 Expanded(child: SizedBox(height: 20.h)),
                 // suggested books
                 Row(
