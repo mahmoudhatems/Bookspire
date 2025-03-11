@@ -20,7 +20,7 @@ class BookListViewItem extends StatelessWidget {
       padding: EdgeInsets.only(right: 20.w, left: 10.w),
       child: GestureDetector(
         onTap: () {
-          GoRouter.of(context).push(Routes.bookDetails);
+          GoRouter.of(context).push(Routes.bookDetails,extra: bookModel);
         },
         child: SizedBox(
           height: 130.h,
