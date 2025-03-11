@@ -1,10 +1,12 @@
 import 'package:bookspire/core/utils/styles.dart';
+import 'package:bookspire/features/home/data/models/book_model/book_model.dart';
 import 'package:bookspire/features/home/presentation/widgets/custom_featured_list_viewItem.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({super.key});
+  const BookDetailsSection({super.key, required this.bookModel});
+final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +18,9 @@ class BookDetailsSection extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(
                   horizontal: MediaQuery.of(context).size.width * 0.1),
-              child: const CustomBookImage(
+              child:  CustomBookImage(
                 bookCoverImageURL:
-                    "https://avatars.githubusercontent.com/u/113213094?s=400&u=58762df8267a952866f4c2b734a0631ae92e4547&v=4",
+                    bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
               ),
             ),
           ],
@@ -26,17 +28,13 @@ class BookDetailsSection extends StatelessWidget {
 
         SizedBox(height: 20.h),
         // Book Title
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Too Late",
-              style: Styles.styleSemiBoldText20darkBlueJua.copyWith(
-                fontSize: 24.sp,
-              ),
-              maxLines: 2,
-            ),
-          ],
+        Text(
+          textAlign: TextAlign.center,
+          bookModel.volumeInfo.title!,
+          style: Styles.styleSemiBoldText20darkBlueJua.copyWith(
+            fontSize: 22.sp,
+          ),
+          maxLines: 2,
         ),
         SizedBox(height: 10.h),
         // Author
@@ -44,7 +42,7 @@ class BookDetailsSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Alex Michaelides",
+              bookModel.volumeInfo.authors![0],
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: Styles.styleNormalText14GrayRoboto.copyWith(

@@ -1,6 +1,7 @@
 import 'package:bookspire/core/utils/colors.dart';
 import 'package:bookspire/core/utils/styles.dart';
 import 'package:bookspire/core/widgets/back_leading_appbar.dart';
+import 'package:bookspire/features/home/data/models/book_model/book_model.dart';
 import 'package:bookspire/features/home/presentation/widgets/book_details_section.dart';
 import 'package:bookspire/features/home/presentation/widgets/book_rating.dart';
 import 'package:bookspire/features/home/presentation/widgets/books_actions.dart';
@@ -9,7 +10,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({super.key});
+  const BookDetailsViewBody({super.key, required this.bookModel});
+
+  final BookModel bookModel;
+
+
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -36,15 +41,17 @@ class BookDetailsViewBody extends StatelessWidget {
             body: Column(
               children: [
                 // Book Cover
-                const BookDetailsSection(),
+                 BookDetailsSection(
+                  bookModel: bookModel,
+                ),
                 // Rating
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(width: 20.w),
-                    const BookRating(
-                      rating: 0,
-                      ratingCount: 1,
+                     BookRating(
+                      rating: bookModel.volumeInfo.averageRating ?? 0,
+                      ratingCount: bookModel.volumeInfo.ratingsCount ?? 0,
 
                     ),
                   ],
