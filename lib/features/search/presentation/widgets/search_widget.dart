@@ -16,12 +16,25 @@ class SearchField extends StatefulWidget {
 }
 
 class _SearchFieldState extends State<SearchField> {
-  final TextEditingController _searchController = TextEditingController();
+  late final TextEditingController _searchController;
+
+  @override
+  void initState() {
+    super.initState();
+    _searchController = TextEditingController();
+  }
 
   void _onSearchSubmitted(String query) {
     if (query.isNotEmpty) {
-      GoRouter.of(context).push('${Routes.search}?query=$query');
+      final encodedQuery =query;
+      GoRouter.of(context).push('${Routes.search}?query=$encodedQuery');
     }
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
   }
 
   @override
@@ -38,7 +51,6 @@ class _SearchFieldState extends State<SearchField> {
           ),
           child: TextField(
             cursorColor: ColorsManager.textIconColor,
-            cursorErrorColor: Colors.red,
             controller: _searchController,
             onSubmitted: _onSearchSubmitted,
             decoration: InputDecoration(
@@ -47,7 +59,6 @@ class _SearchFieldState extends State<SearchField> {
               hintText: 'Search a book or author..',
               hintStyle: Styles.styleText14BlackColorRoboto,
               border: InputBorder.none,
-              hintMaxLines: 1,
               contentPadding: EdgeInsets.symmetric(vertical: 12.h),
             ),
             style: Styles.styleText14BlackColorRoboto,

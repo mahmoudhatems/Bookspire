@@ -1,5 +1,6 @@
 import 'package:bookspire/core/services/api_service.dart';
 import 'package:bookspire/features/home/data/repos/home_repo_implementation.dart';
+import 'package:bookspire/features/search/data/repos/search_repo_implementation.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
@@ -10,6 +11,9 @@ void setupServiceLocator() {
   getIt.registerSingleton<HomeRepoImplementation>(HomeRepoImplementation(
     apiService: getIt.get<ApiService>(),
   ));
+  getIt.registerLazySingleton<SearchRepoImplementation>(
+    () => SearchRepoImplementation(apiService: getIt<ApiService>()),
+  );
 
   // getIt.registerSingleton<AuthService>(AuthService());
   // getIt.registerSingleton<NavigationService>(NavigationService());

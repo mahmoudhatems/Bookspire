@@ -4,6 +4,8 @@ import 'package:bookspire/core/utils/colors.dart';
 import 'package:bookspire/features/home/data/repos/home_repo_implementation.dart';
 import 'package:bookspire/features/home/presentation/view%20model/featured%20books%20cubit/featured_books_cubit.dart';
 import 'package:bookspire/features/home/presentation/view%20model/newest%20books%20cubit/newset_books_cubit.dart';
+import 'package:bookspire/features/search/data/repos/search_repo_implementation.dart';
+import 'package:bookspire/features/search/presentation/view%20model/bloc/search_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,7 +24,10 @@ class BookSpire extends StatelessWidget {
         BlocProvider(
             create: (context) =>
                 NewsetBooksCubit(getIt.get<HomeRepoImplementation>())
-                  ..fetchNewsetBooks())
+                  ..fetchNewsetBooks()),
+        BlocProvider(
+          create: (context) => SearchBloc(getIt<SearchRepoImplementation>()),
+        )
       ],
       child: ScreenUtilInit(
         splitScreenMode: false,

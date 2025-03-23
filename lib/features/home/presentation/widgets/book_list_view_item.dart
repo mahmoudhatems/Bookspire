@@ -1,5 +1,4 @@
 import 'package:bookspire/core/routing/routes.dart';
-import 'package:bookspire/core/utils/strings.dart';
 import 'package:bookspire/core/utils/styles.dart';
 import 'package:bookspire/features/home/data/models/book_model/book_model.dart';
 import 'package:bookspire/features/home/presentation/widgets/book_rating.dart';
